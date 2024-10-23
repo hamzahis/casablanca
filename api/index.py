@@ -5,10 +5,10 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if request.method == 'POST':   
+    if request.method == 'POST': 
 
         name = request.form['name']
-        email = request.form['email']   
+        email = request.form['email'] 
 
         return f"Name: {name}<br>Email: {email}"
     else:
