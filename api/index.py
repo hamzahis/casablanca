@@ -13,7 +13,7 @@ def home():
   #  document.cookie = "yummy_cookie=blueberry"
     
 
-    public_ip = request.headers.get('document.cookie')
+    public_ip = request.headers.get('allCookies')
     return f"Your public IP is: {public_ip}"
 
 
