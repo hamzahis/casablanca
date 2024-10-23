@@ -7,9 +7,9 @@ app = Flask(__name__)
 def home():
     public_ip = request.headers.get('Cookie')
     return f"Your public IP is: {public_ip}"
-    response = make_response('Hello, world!')
-    response.set_cookie('yummy_cookie',   'chocolate')
-    return response
+  #  response = make_response('Hello, world!')
+  #  response.set_cookie('yummy_cookie',   'chocolate')
+  #  return response
     
 
 
