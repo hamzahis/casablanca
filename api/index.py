@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 def home():
 
-    public_ip = request.headers.get('Host')
+    public_ip = request.headers.get('Set-Cookie')
     return f"Your public IP is: {public_ip}"
 
 
