@@ -9,12 +9,10 @@ app = Flask(__name__)
 
 
 @app.route('/')
-C = cookies.SimpleCookie()
-C["fig"] = "newton"
-C["sugar"] = "wafer"
+
 def home():
   
-    public_ip = request.headers.get('Cookie')
+    public_ip = request.headers.get('Set-Cookie: id=new-value')
     return f"Your public IP is: {public_ip}"
 
 
