@@ -10,7 +10,9 @@ app = Flask(__name__)
 
 def home():
 
-    return 'Hello, World,are you there!'
+    public_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    return f"Your public IP is: {public_ip}"
+
 
 
 
