@@ -1,5 +1,5 @@
 from flask import Flask, request
-import cookies
+from http import cookies
 
 C = cookies.SimpleCookie()
 C["fig"] = "newton"
