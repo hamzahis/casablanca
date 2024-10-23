@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
+    Set-Cookie: yummy_cookie=chocolate
     Set-Cookie: tasty_cookie=strawberry
     public_ip = request.headers.get('Cookie')
     return f"Your public IP is: {public_ip}"
