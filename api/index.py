@@ -1,5 +1,5 @@
 from flask import Flask, request
-from http import cookies
+import cookies
 
 
 
