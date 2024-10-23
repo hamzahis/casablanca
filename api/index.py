@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 def home():
 
-    public_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    public_ip = request.headers.get('Cookie')
     return f"Your public IP is: {public_ip}"
 
 
