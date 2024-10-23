@@ -1,10 +1,9 @@
 from flask import Flask, request
 import cookies
 
-
-  C = cookies.SimpleCookie()
-  C["fig"] = "newton"
-  C["sugar"] = "wafer"
+C = cookies.SimpleCookie()
+C["fig"] = "newton"
+C["sugar"] = "wafer"
 
 
 app = Flask(__name__)
