@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Name and Email Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve Data</title>
 </head>
 <body>
-    <h1>Enter Your Information</h1>
-    <form method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <input type="submit" value="Submit">
-    </form>
+    <h1>Retrieve User Data from First Domain</h1>
+    <p id="userData">Fetching user data...</p>
+
+    <script>
+        // Fetch the cookie data from the first domain's endpoint
+        fetch('https://sssssss-sigma.vercel.app/get-cookie', {
+            credentials: 'include'  // Allows sending cookies with the request
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Display the fetched data on the page
+            document.getElementById('userData').textContent = `User data: ${data.user_data || data.error}`;
+        })
+        .catch(error => {
+            console.error("Error fetching data:", error);
+            document.getElementById('userData').textContent = 'Error fetching user data.';
+        });
+    </script>
 </body>
 </html>
+
